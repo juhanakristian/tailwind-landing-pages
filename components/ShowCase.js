@@ -15,7 +15,7 @@ function CodeToggle({ on, onClick }) {
   );
 }
 
-export default function PageDemo({ url, html }) {
+export default function ShowCase({ url, html }) {
   const [showCode, setShowCode] = React.useState(false);
 
   React.useEffect(() => {
