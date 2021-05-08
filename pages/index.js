@@ -9,7 +9,9 @@ import ShowCase from "../components/ShowCase";
 export default function Home({ templates }) {
   return (
     <div className="pt-12">
-      <ShowCase url="/templates/01-simple-saas" html={templates[0].html} />
+      {templates.map((t) => (
+        <ShowCase url={t.url} html={t.html} />
+      ))}
     </div>
   );
 }
@@ -20,6 +22,7 @@ export async function getStaticProps(context) {
     props: {
       templates: [
         {
+          url: "/templates/01-simple-saas",
           html: template,
         },
       ],
