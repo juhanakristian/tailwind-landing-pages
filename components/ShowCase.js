@@ -17,12 +17,27 @@ function CopyIcon() {
   );
 }
 
+function OpenLinkIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="#8e8e8e"
+    >
+      <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" />
+    </svg>
+  );
+}
+
 function CodeToggle({ on, onClick }) {
   const text = on ? "</> Code" : "Preview";
   return (
     <button
       className="p-4 pt-1.5 pb-1 text-sm text-gray-500 h-8 bg-gray-100 rounded-md"
       onClick={onClick}
+      title={on ? "Switch to code" : "Switch to preview"}
     >
       {text}
     </button>
@@ -54,9 +69,19 @@ export default function ShowCase({ url, html }) {
         <button
           className="flex items-center justify-center h-8 pl-2 pr-2 text-gray-300 bg-gray-100 rounded-md"
           onClick={handleCopy}
+          title="Copy code to clipboard"
         >
           <CopyIcon />
         </button>
+        <a
+          className="flex items-center justify-center h-8 pl-2 pr-2 text-gray-300 bg-gray-100 rounded-md"
+          target="_blank"
+          rel=""
+          href={url}
+          title="Open in a new tab"
+        >
+          <OpenLinkIcon />
+        </a>
       </div>
       <div className="h-full border-2 border-gray-100 rounded-lg shadow-lg">
         <div
