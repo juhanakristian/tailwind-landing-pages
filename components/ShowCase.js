@@ -120,7 +120,7 @@ export default function ShowCase({ url, html }) {
         </div>
         <iframe
           style={{ display: showCode ? "none" : "block" }}
-          className="w-full h-full "
+          className="w-full h-full rounded-lg"
           src={url}
         ></iframe>
       </div>
