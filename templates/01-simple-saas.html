@@ -1,3 +1,12 @@
+
+<style>
+    .dot-bg {
+        background: white;
+        background-image: radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0);
+        background-size: 22px 22px;
+        background-position: -19px -19px;
+    }
+</style>
 <div>
     <header class="sticky top-0 z-20 flex items-center justify-between bg-white shadow-lg">
     <div class="flex gap-2 p-6">
@@ -8,13 +17,13 @@
         <a href="#" class="font-medium text-blue-700 hover:text-gray-900">
             Product
         </a>
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
             Features
         </a>
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
             Pricing
         </a>
-        <a href="#" class="font-medium text-gray-500 hover:text-gray-900">
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
             About
         </a>
     </nav>
@@ -92,7 +101,7 @@
     <section class="bg-blue-200">
         <div class="p-32 pt-16">
             <div class="max-w-2xl p-10 m-auto text-center">
-                <h2 class="m-auto text-4xl font-semibold text-center ">Our Pricing</h2>
+                <h2 class="m-auto text-4xl font-semibold text-center text-gray-800">Our Pricing</h2>
                 <p class="pt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida, facilisis fringilla neque. </p>
             </div>
             <p></p>
@@ -154,33 +163,52 @@
             </div>
         </div>
     </section>
-    <section class="flex flex-col">
+    <section class="flex flex-col p-16 dot-bg">
         <div class="max-w-2xl p-10 m-auto text-center">
             <h2 class="m-auto text-4xl font-semibold text-center ">Testimonials</h2>
             <p class="pt-4 text-gray-700">This is what people have to say about our product</p>
         </div>
-        <div class="grid max-w-5xl grid-cols-6 grid-rows-3 m-auto">
-            <div class="flex col-span-4 row-start-1 gap-4">
-                <div class="w-32 h-32 shadow-lg rounded-3xl"></div>
-                <div class="flex flex-col items-start justify-center">
-                    <p class="text-lg italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida </p>
+        <div class="flex flex-col w-2/3 gap-8 pb-10 m-auto">
+            <div class="flex max-w-3xl gap-4">
+                <img class="object-cover w-32 h-32 shadow-lg rounded-3xl bg-gray-50" src="/images/art-hauntington-jzY0KRJopEI-unsplash.jpg"/>
+                <!-- Photo by <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Hauntington</a> on <a href="https://unsplash.com/s/photos/person?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+
+                <div class="flex flex-col items-start justify-center max-w-xl">
+                    <p class="text-lg italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida"</p>
                     <span class="font-bold">John Doe</span>
                 </div>
             </div>
-            <div class="flex flex-row-reverse col-span-4 col-start-3 row-start-2 gap-4">
-                <div class="w-32 h-32 shadow-lg rounded-3xl"></div>
-                <div class="flex flex-col items-end justify-center">
-                    <p class="text-2xl">"This is a quote from a user of our product"</p>
-                    <span>John Doe</span>
+            <div class="flex flex-row-reverse max-w-3xl gap-4 ml-auto">
+                <img class="object-cover w-32 h-32 shadow-lg rounded-3xl bg-gray-50" src="/images/art-hauntington-0wRXAXqIp58-unsplash.jpg"/>
+                <!-- Photo by <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Hauntington</a> on <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+                <div class="flex flex-col items-start justify-center max-w-xl">
+                    <p class="text-lg italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida"</p>
+                    <span class="font-bold">John Doe</span>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section class="flex flex-col p-16 bg-gray-100">
+        <div class="max-w-2xl p-10 m-auto text-center">
+            <h2 class="m-auto text-4xl font-semibold text-center ">Frequently asked questions</h2>
+        </div>
+        <div class="flex flex-col max-w-3xl gap-16 m-auto">
+            <div>
+                <h4 class="pb-4 font-bold">What is the pricing like?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis mollis metus. Cras egestas lacus at enim maximus, eget scelerisque massa congue. Nulla facilisi.</p>
+            </div>
+            <div>
+                <h4 class="pb-4 font-bold">What is the pricing like?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis mollis metus. Cras egestas lacus at enim maximus, eget scelerisque massa congue. Nulla facilisi.</p>
+            </div>
 
-        <h2>FAQ</h2>
-        <div></div>
+        </div>
+        <div class="flex flex-col w-2/3 m-auto">
+        </div>
     </section>
     </main>
-    <footer></footer>
+    <footer class="">
+
+
+    </footer>
 </div>
