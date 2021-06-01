@@ -60,10 +60,7 @@ export default function ShowCase({ url, html }) {
   }
 
   return (
-    <div
-      style={{ maxWidth: "85rem", height: showCode ? "auto" : "60rem" }}
-      className="py-20 mx-auto sm:px-6 lg:px-8"
-    >
+    <div className="mx-auto" style={{ maxWidth: "85rem" }}>
       <div className="flex justify-end w-full gap-2 pb-4">
         <CodeToggle on={!showCode} onClick={() => setShowCode(!showCode)} />
         <button
@@ -83,46 +80,48 @@ export default function ShowCase({ url, html }) {
           <OpenLinkIcon />
         </a>
       </div>
-      <div className="h-full border-2 border-gray-100 rounded-lg shadow-lg">
-        <div
-          className="h-full"
-          style={{ display: !showCode ? "none" : "block" }}
-        >
-          <Highlight
-            {...defaultProps}
-            code={html}
-            language="html"
-            theme={nightOwl}
+      <div style={{ height: showCode ? "auto" : "60rem" }}>
+        <div className="h-full border-2 border-gray-100 rounded-lg shadow-lg">
+          <div
+            className="h-full"
+            style={{ display: !showCode ? "none" : "block" }}
           >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
-              <pre
-                className={className}
-                style={{
-                  ...style,
-                  margin: 0,
-                  paddingTop: 5,
-                  paddingLeft: 10,
-                  borderRadius: "8px",
-                  overflow: "auto",
-                }}
-                ref={codeRef}
-              >
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
+            <Highlight
+              {...defaultProps}
+              code={html}
+              language="html"
+              theme={nightOwl}
+            >
+              {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre
+                  className={className}
+                  style={{
+                    ...style,
+                    margin: 0,
+                    paddingTop: 5,
+                    paddingLeft: 10,
+                    borderRadius: "8px",
+                    overflow: "auto",
+                  }}
+                  ref={codeRef}
+                >
+                  {tokens.map((line, i) => (
+                    <div {...getLineProps({ line, key: i })}>
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
+          </div>
+          <iframe
+            style={{ display: showCode ? "none" : "block" }}
+            className="w-full h-full rounded-lg"
+            src={url}
+          ></iframe>
         </div>
-        <iframe
-          style={{ display: showCode ? "none" : "block" }}
-          className="w-full h-full rounded-lg"
-          src={url}
-        ></iframe>
       </div>
     </div>
   );
