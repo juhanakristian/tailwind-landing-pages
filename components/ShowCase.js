@@ -3,6 +3,8 @@ import * as React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import nightOwl from "prism-react-renderer/themes/nightOwl";
 
+import { useResizeHandle } from "useresizehandle";
+
 function CopyIcon() {
   return (
     <svg
@@ -48,6 +50,10 @@ export default function ShowCase({ url, html }) {
   const [showCode, setShowCode] = React.useState(false);
   const codeRef = React.useRef(null);
 
+  const { containerProps, handleProps } = useResizeHandle({
+    axis: "horizontal",
+  });
+
   function handleCopy() {
     if (!codeRef.current) return;
 
@@ -81,46 +87,87 @@ export default function ShowCase({ url, html }) {
         </a>
       </div>
       <div style={{ height: showCode ? "auto" : "60rem" }}>
-        <div className="h-full border-2 border-gray-100 rounded-lg shadow-lg">
+        <div className="h-full bg-gray-300 border-gray-100 rounded-lg shadow-lg">
           <div
             className="h-full"
             style={{ display: !showCode ? "none" : "block" }}
           >
-            <Highlight
-              {...defaultProps}
-              code={html}
-              language="html"
-              theme={nightOwl}
-            >
-              {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre
-                  className={className}
-                  style={{
-                    ...style,
-                    margin: 0,
-                    paddingTop: 5,
-                    paddingLeft: 10,
-                    borderRadius: "8px",
-                    overflow: "auto",
-                  }}
-                  ref={codeRef}
-                >
-                  {tokens.map((line, i) => (
-                    <div {...getLineProps({ line, key: i })}>
-                      {line.map((token, key) => (
-                        <span {...getTokenProps({ token, key })} />
-                      ))}
-                    </div>
-                  ))}
-                </pre>
-              )}
-            </Highlight>
+            {showCode && (
+              <Highlight
+                {...defaultProps}
+                code={html}
+                language="html"
+                theme={nightOwl}
+              >
+                {({
+                  className,
+                  style,
+                  tokens,
+                  getLineProps,
+                  getTokenProps,
+                }) => (
+                  <pre
+                    className={className}
+                    style={{
+                      ...style,
+                      margin: 0,
+                      paddingTop: 5,
+                      paddingLeft: 10,
+                      borderRadius: "8px",
+                      overflow: "auto",
+                    }}
+                    ref={codeRef}
+                  >
+                    {tokens.map((line, i) => (
+                      <div {...getLineProps({ line, key: i })}>
+                        {line.map((token, key) => (
+                          <span {...getTokenProps({ token, key })} />
+                        ))}
+                      </div>
+                    ))}
+                  </pre>
+                )}
+              </Highlight>
+            )}
           </div>
-          <iframe
-            style={{ display: showCode ? "none" : "block" }}
-            className="w-full h-full rounded-lg"
-            src={url}
-          ></iframe>
+          <div
+            {...containerProps}
+            className="bg-white"
+            style={{
+              ...containerProps.style,
+              height: "100%",
+              paddingRight: 15,
+              minWidth: 100,
+              maxWidth: "100%",
+            }}
+          >
+            {/* .dot-bg {
+        background: white;
+        background-image: radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0);
+        background-size: 22px 22px;
+        background-position: -19px -19px;
+    } */}
+            <iframe
+              style={{ display: showCode ? "none" : "block" }}
+              className="w-full h-full"
+              src={url}
+            ></iframe>
+            <div {...handleProps} style={{ ...handleProps.style, top: "50%" }}>
+              <div
+                className="w-10 m-w-5"
+                style={{
+                  width: 15,
+                  height: 30,
+                  cursor: "move",
+                  background: "white",
+                  backgroundImage:
+                    "radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0)",
+                  backgroundSize: "7px 9px",
+                  backgroundPosition: "0px 0px",
+                }}
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
