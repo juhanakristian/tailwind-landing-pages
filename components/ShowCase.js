@@ -50,8 +50,12 @@ export default function ShowCase({ url, html }) {
   const [showCode, setShowCode] = React.useState(false);
   const codeRef = React.useRef(null);
 
+  const [resizing, setResizing] = React.useState(false);
+
   const { containerProps, handleProps } = useResizeHandle({
     axis: "horizontal",
+    onResizeStart: () => setResizing(true),
+    onResizeEnd: () => setResizing(false),
   });
 
   function handleCopy() {
@@ -148,7 +152,10 @@ export default function ShowCase({ url, html }) {
         background-position: -19px -19px;
     } */}
             <iframe
-              style={{ display: showCode ? "none" : "block" }}
+              style={{
+                display: showCode ? "none" : "block",
+                pointerEvents: resizing ? "none" : "initial",
+              }}
               className="w-full h-full"
               src={url}
             ></iframe>

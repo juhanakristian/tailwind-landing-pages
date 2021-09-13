@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Resizable } from "re-resizable";
 
 import { getTemplate } from "../lib/templates";
 
@@ -16,8 +15,10 @@ export default function Home({ templates }) {
         </h2>
       </section>
       <div>
-        {templates.map((t) => (
-          <ShowCase url={t.url} html={t.html} />
+        {templates.map((t, i) => (
+          <div className="pb-12" key={i}>
+            <ShowCase url={t.url} html={t.html} />
+          </div>
         ))}
       </div>
       <div className="absolute top-4 right-4">
@@ -35,13 +36,16 @@ export default function Home({ templates }) {
 }
 
 export async function getStaticProps(context) {
-  const template = getTemplate("01-simple-saas");
   return {
     props: {
       templates: [
         {
           url: "/templates/01-simple-saas",
-          html: template,
+          html: getTemplate("01-simple-saas"),
+        },
+        {
+          url: "/templates/02-book",
+          html: getTemplate("02-book"),
         },
       ],
     },
