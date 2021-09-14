@@ -8,12 +8,13 @@
     }
 </style>
 <div>
-    <header class="sticky top-0 z-20 flex items-center justify-between bg-white shadow-lg">
+    <header class="sticky top-0 z-20 bg-white shadow-lg">
+        <div class="flex items-center justify-between">
     <div class="flex gap-2 p-6">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="rgba(29, 78, 216)" viewBox="0 0 24 24"><path d="M10 2h-2v-2h2v2zm-8 6h-2v2h2v-2zm0-5c0-.551.448-1 1-1h4v-2h-4c-1.657 0-3 1.343-3 3v4h2v-4zm0 8h-2v2h2v-2zm14-11h-2v2h2v-2zm-3 0h-2v2h2v-2zm-11 14h-2v2h2v-2zm18-2.042h-2.277l-2.36 5.386-2.883-7.93-2.442 5.78-2.071-4.14-1.129 1.966h-2.838v6.98h16v-8.042zm-16 .063h2.259l1.768-3.081 1.935 3.866 2.589-6.126 2.899 7.976 1.62-3.697h2.93v-6.959h-16v8.021zm10 11.979h2v-2h-2v2zm8-11h2v-2h-2v2zm-20 8v-4h-2v4c0 1.657 1.343 3 3 3h4v-2h-4c-.552 0-1-.449-1-1zm20 0c0 .551-.448 1-1 1h-4v2h4c1.657 0 3-1.343 3-3v-4h-2v4zm0-11h2v-2h-2v2zm0 6h2v-2h-2v2zm2-13c0-1.657-1.343-3-3-3h-4v2h4c.552 0 1 .449 1 1v4h2v-4zm-16 21h2v-2h-2v2zm3 0h2v-2h-2v2z"/></svg>
         <div class="text-lg font-bold">Company Name</div>
     </div>
-    <div class="pr-6 md:hidden">
+    <div id="menubutton" class="pr-6 cursor-pointer md:invisible md:absolute">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
     </div>
     <nav class="hidden py-6 pr-24 space-x-12 md:block">
@@ -31,7 +32,24 @@
         </a>
     </nav>
 
+        </div>
+
+    <nav id="menu" class="absolute flex flex-col invisible w-full gap-4 pb-4 pl-4 text-lg bg-white">
+        <a href="#" class="font-medium text-blue-700 hover:text-gray-900">
+            Product
+        </a>
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
+            Features
+        </a>
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
+            Pricing
+        </a>
+        <a href="#" class="font-medium text-gray-700 hover:text-gray-900">
+            About
+        </a>
+    </nav>
     </header>
+
     <main>
 
     <section class="relative flex flex-col justify-between p-0 bg-blue-700 md:p-8 xl:p-24">
@@ -107,7 +125,7 @@
                 <p class="pt-4 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida, facilisis fringilla neque. </p>
             </div>
             <p></p>
-            <div class="grid grid-cols-1 m-auto mt-20 rounded-md sm:grid-cols-3">
+            <div class="grid grid-cols-1 gap-4 m-auto mt-20 rounded-md md:grid-cols-3 md:gap-0">
             <div class="flex flex-col p-8 pt-0 text-center bg-white rounded-md shadow-sm">
                 <div class="pt-4 pb-4 -ml-8 -mr-8 text-lg text-gray-600 uppercase bg-gray-200 rounded-t-md">Basic</div>
                 <div class="flex items-center justify-center gap-2 p-8">
@@ -124,7 +142,7 @@
                     Sign up
                 </button>
             </div>
-            <div class="z-10 flex flex-col p-8 pt-0 -m-4 text-center bg-white rounded-md shadow-lg">
+            <div class="z-10 flex flex-col p-8 pt-0 text-center bg-white rounded-md shadow-lg md:-m-4">
                 <div class="pt-4 pb-4 -ml-8 -mr-8 text-lg text-white uppercase bg-blue-600 rounded-t-md">Professional</div>
                 <div class="flex items-center justify-center gap-2 p-8">
                     <span class="text-5xl font-bold text-gray-700">$149</span>
@@ -171,19 +189,20 @@
             <p class="pt-4 text-gray-700">This is what people have to say about our product</p>
         </div>
         <div class="flex flex-col w-2/3 gap-8 pb-10 m-auto">
-            <div class="flex max-w-3xl gap-4">
-                <img class="object-cover w-32 h-32 shadow-lg rounded-3xl bg-gray-50" src="/images/art-hauntington-jzY0KRJopEI-unsplash.jpg"/>
+            <div class="flex flex-col max-w-3xl gap-4 md:flex-row">
+                <img class="object-cover w-32 h-32 m-auto shadow-lg md:m-0 rounded-3xl bg-gray-50" src="/images/art-hauntington-jzY0KRJopEI-unsplash.jpg"/>
                 <!-- Photo by <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Hauntington</a> on <a href="https://unsplash.com/s/photos/person?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
 
-                <div class="flex flex-col items-start justify-center max-w-xl">
+                <div class="flex flex-col items-center justify-center max-w-xl text-center md:text-left md:items-start">
                     <p class="text-lg italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida"</p>
                     <span class="font-bold">John Doe</span>
                 </div>
             </div>
-            <div class="flex flex-row-reverse max-w-3xl gap-4 ml-auto">
-                <img class="object-cover w-32 h-32 shadow-lg rounded-3xl bg-gray-50" src="/images/art-hauntington-0wRXAXqIp58-unsplash.jpg"/>
-                <!-- Photo by <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Hauntington</a> on <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
-                <div class="flex flex-col items-start justify-center max-w-xl">
+            <div class="flex flex-col max-w-3xl gap-4 md:flex-row">
+                <img class="object-cover w-32 h-32 m-auto shadow-lg md:m-0 rounded-3xl bg-gray-50" src="/images/art-hauntington-0wRXAXqIp58-unsplash.jpg"/>
+                <!-- Photo by <a href="https://unsplash.com/@art_hauntington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Art Hauntington</a> on <a href="https://unsplash.com/s/photos/person?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+
+                <div class="flex flex-col items-center justify-center max-w-xl text-center md:text-left md:items-start">
                     <p class="text-lg italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ex risus, eleifend in nibh gravida"</p>
                     <span class="font-bold">John Doe</span>
                 </div>
@@ -215,14 +234,14 @@
         </div>
     </section>
     <section class="flex flex-col bg-white p-28">
-        <div class="flex flex-col items-center m-auto">
-       <p class="text-2xl">Join our newsletter and get invaluable tips!</p>
-    <div class="flex flex-col gap-2 pt-8 pb-4 lg:flex-row">
-        <input class="box-border p-4 border-2 rounded-md lg:w-56" placeholder="Your email address""></input>
-        <button class="p-4 text-base font-semibold text-gray-900 bg-yellow-300 rounded-lg hover:bg-yellow-400">
-            Subscribe
-        </button>
-    </div>
+        <div class="flex flex-col items-center m-auto text-center md:text-left">
+            <p class="text-2xl">Join our newsletter and get invaluable tips!</p>
+            <div class="flex flex-col gap-2 pt-8 pb-4 lg:flex-row">
+                <input class="box-border p-4 border-2 rounded-md lg:w-56" placeholder="Your email address""></input>
+                <button class="p-4 text-base font-semibold text-gray-900 bg-yellow-300 rounded-lg hover:bg-yellow-400">
+                    Subscribe
+                </button>
+            </div>
         </div>
     </section>
     </main>
@@ -284,3 +303,14 @@
         </ul>
     </footer>
 </div>
+<script>
+    const menuButton = document.querySelector("#menubutton");
+    menuButton.addEventListener("click", () => {
+        const menu = document.querySelector("#menu")
+        if(menu.classList.contains("invisible")) {
+            menu.classList.remove("invisible")
+        } else {
+            menu.classList.add("invisible")
+        }
+    });
+</script>
