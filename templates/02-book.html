@@ -1,6 +1,6 @@
 <div>
   <header class="max-w-5xl pt-20 pb-20 ml-auto mr-auto text-center">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
       <div class="flex flex-col items-center gap-4 pt-8">
         <div>
           <h1 class="p-4 font-bold text-blue-600 text-7xl">THE BOOK TITLE</h1>
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Book picture-->
-      <img class="w-full" src="/images/book.png" alt="The Book Title by John Doe" />
+      <img class="w-3/4 m-auto lg:w-full" src="/images/book.png" alt="The Book Title by John Doe" />
       <div></div>
     </div>
     <div>
@@ -35,9 +35,9 @@
     </div>
   </header>
   <!-- Links to bookstores-->
-  <section class="h-40 p-8 bg-blue-700">
+  <section class="p-8 bg-blue-700 md:h-40">
     <!-- <h4 class="text-lg text-center text-white">Get your copy</h4> -->
-    <div class="flex justify-between max-w-5xl p-8 m-auto">
+    <div class="flex flex-col justify-between max-w-5xl gap-6 p-8 m-auto text-center md:flex-row">
       <div class="text-white">
         Amazon.com
       </div>
@@ -54,10 +54,11 @@
   </section>
 
   <!-- About the book-->
-  <section class="">
-    <div class="grid max-w-6xl grid-cols-2 m-auto">
-      <div class="p-12 bg-gray-800 text-gray-50">
+  <section class="pt-12 pb-12">
+    <div class="grid max-w-6xl grid-cols-1 m-auto lg:grid-cols-2">
+      <div class="p-4 text-gray-900 md:p-12">
         <h4 class="pb-8 pl-4 text-5xl">About the book</h4>
+        <div class="w-32 h-1 mb-8 ml-4 bg-blue-300"></div>
         <h5 class="p-4 text-2xl font-semibold">Summary</h5>
         <p class="p-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
@@ -72,7 +73,7 @@
           lectus neque.
         </p>
       </div>
-      <div class="p-12 pt-32">
+      <div class="p-4 lg:pt-40 md:p-12">
         <h5 class="p-4 text-2xl font-semibold">Table of contents</h5>
         <ol class="pl-4">
           <li class="flex items-center justify-between pt-2 pb-2 text-lg border-b-2 border-dotted">
@@ -135,9 +136,9 @@
   </section>
 
   <!-- What people are saying -->
-  <section class="bg-blue-900 ">
+  <section class="bg-gray-800">
     <!-- <h4 class="text-6xl text-center">What people are saying</h4> -->
-    <div class="grid max-w-6xl grid-cols-3 m-auto">
+    <div class="grid max-w-6xl grid-cols-1 m-auto md:grid-cols-3">
       <div class="relative h-96">
         <!--Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/s/photos/ceo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   -->
@@ -212,10 +213,11 @@
   </section>
 
   <!-- About the author-->
-  <section class="max-w-6xl p-12 m-auto">
-    <div class="grid grid-cols-2 gap-20 pt-20">
+  <section class="max-w-6xl p-6 pt-12 pb-12 m-auto md:p-12">
+    <div class="grid grid-cols-1 gap-20 lg:grid-cols-2">
       <div class="flex-grow">
         <h4 class="pb-8 text-4xl">About the author, John Doe</h4>
+        <div class="w-32 h-1 mb-8 bg-blue-300"></div>
         <p class="pt-4 pb-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
           lacus egestas lacus, id ullamcorper magna lacus id neque. Vivamus quis augue ex. Nullam vitae quam hendrerit,
@@ -228,7 +230,7 @@
         </p>
 
       </div>
-      <img class="" src="/images/christian-buehner-84E44EdD18o-unsplash.jpg" />
+      <img class="m-auto" src="/images/christian-buehner-84E44EdD18o-unsplash.jpg" />
     </div>
 
 
@@ -236,18 +238,66 @@
   -->
   </section>
 
-  <section class="flex flex-col bg-white p-28">
+  <section class="flex flex-col p-6 bg-white lg:p-28">
     <div class="flex flex-col items-center max-w-6xl m-auto text-center md:text-left">
       <p class="text-2xl">Join the newsletter and get a free chapter!</p>
       <div class="flex flex-col gap-2 pt-8 pb-4 lg:flex-row">
-        <input class="box-border p-4 border-2 rounded-md lg:w-56" placeholder="Your email address""></input>
-                <button class="p-4 text-base font-semibold text-gray-900 bg-yellow-300 rounded-lg  hover:bg-yellow-400">
+        <input class="box-border p-4 border-2 rounded-md lg:w-72" placeholder="Your email address""></input>
+                <button class="p-4 text-base font-semibold text-gray-900 bg-blue-300 rounded-lg  hover:bg-blue-400">
         Subscribe
         </button>
       </div>
     </div>
   </section>
-  <footer>
-
+  <footer class="p-20 pt-10">
+    <ul class="flex justify-between max-w-2xl m-auto">
+      <li class="flex items-center gap-2">
+        <a aria-label="twitter" class="text-gray-500" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="20"
+            height="20" viewBox="0 0 24 24" stroke-width="1" stroke="rgb(107, 114, 128)" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+          </svg>
+        </a>
+      </li>
+      <li class="flex items-center gap-2">
+        <a aria-label="twitter" class="text-gray-500" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="20"
+            height="20" viewBox="0 0 24 24" stroke-width="1" stroke="rgb(107, 114, 128)" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </li>
+      <li class="flex items-center gap-2">
+        <a aria-label="twitter" class="text-gray-500" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="20"
+            height="20" viewBox="0 0 24 24" stroke-width="1" stroke="rgb(107, 114, 128)" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+        </a>
+      </li>
+      <li class="flex items-center gap-2">
+        <a aria-label="twitter" class="text-gray-500" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="20"
+            height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(107, 114, 128)" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="4" />
+            <circle cx="12" cy="12" r="3" />
+            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+          </svg>
+        </a>
+      </li>
+    </ul>
   </footer>
 </div>
