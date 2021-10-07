@@ -47,6 +47,10 @@ export async function getStaticProps(context) {
           url: "/templates/02-book",
           html: getTemplate("02-book"),
         },
+        {
+          url: "/templates/03-newsletter",
+          html: getTemplate("03-newsletter"),
+        },
       ],
     },
   };
