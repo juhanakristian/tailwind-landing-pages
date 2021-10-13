@@ -1,26 +1,59 @@
 <style>
-  .slanted {
-    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  @media screen and (min-width: 768px) {
+    .slanted {
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
   }
 </style>
 <div class="bg-gray-50">
-  <header class="flex w-full justify-evenly">
-    <div class="p-20">
-      <h1 class="text-6xl font-bold">The Awesome and Super Interesting Newsletter</h1>
+  <!-- <div class="m-auto max-w-7xl"> -->
+  <header class="flex flex-col w-full justify-evenly md:flex-row">
 
+    <div class="flex-1 p-10 pt-40 pb-40">
+      <div class="max-w-2xl ml-auto">
+        <h1 class="text-6xl font-bold">The Awesome and Super Interesting Newsletter</h1>
+      </div>
     </div>
-    <div class="p-20 text-white bg-blue-600 slanted">
-      <h2 class="pl-10 text-4xl font-bold">
-        Get the latest news on the topic of this newsletter delivered into your mailbox
-      </h2>
+
+    <div class="flex-1 w-full p-20 pt-40 pb-40 pl-20 text-white bg-blue-600 md:pl-40 slanted">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl font-bold">
+          Get the latest news on the topic of this newsletter delivered into your mailbox
+        </h2>
+        <div class="flex flex-col items-center m-auto text-center md:text-left">
+          <div class="flex flex-col w-full gap-2 pt-8 pb-4 lg:flex-row">
+            <input class="box-border w-full p-4 border-2 rounded-md lg:w-72" placeholder="Your email address""></input>
+        <button class="w-full p-4 text-base font-semibold text-white bg-blue-300 rounded-lg  lg:w-40 hover:bg-blue-400">
+            Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </header>
+  <!-- </div> -->
 
-  <!-- Signup -->
-  <section class="relative top-0 z-30 p-8 bg-blue-200 md:sticky">
+  <!-- Example of newsletter content -->
+  <section class="p-40 bg-gray-100">
+    <div class="max-w-5xl m-auto">
+      <h3 class="text-4xl font-semibold">What to expect</h3>
+      <p class="pt-4 pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
+        lacus egestas lacus, id ullamcorper magna lacus id neque. Vivamus quis augue ex. Nullam vitae quam hendrerit,
+        sollicitudin lectus vitae, efficitur arcu.
+      </p>
+      <p class="pt-4 pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
+        lacus egestas lacus, id ullamcorper magna lacus id neque. Vivamus quis augue ex. Nullam vitae quam hendrerit,
+        sollicitudin lectus vitae, efficitur arcu.
+      </p>
+
+    </div>
   </section>
 
-  <!-- About the book-->
+  <!--  -->
   <section class="pt-12 pb-12">
   </section>
 
@@ -36,4 +69,5 @@
   </section>
   <footer class="p-20 pt-10">
   </footer>
+
 </div>
