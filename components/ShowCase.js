@@ -70,7 +70,7 @@ export default function ShowCase({ url, html }) {
   }
 
   return (
-    <div className="mx-auto" style={{ maxWidth: "85rem" }}>
+    <div className="mx-auto" style={{ maxWidth: "60rem" }}>
       <div className="flex justify-end w-full gap-2 pb-4">
         <CodeToggle on={!showCode} onClick={() => setShowCode(!showCode)} />
         <button
@@ -90,7 +90,7 @@ export default function ShowCase({ url, html }) {
           <OpenLinkIcon />
         </a>
       </div>
-      <div style={{ height: showCode ? "auto" : "60rem" }}>
+      <div style={{ height: showCode ? "auto" : "42rem" }}>
         <div className="h-full bg-gray-300 border-gray-100 rounded-lg shadow-lg">
           <div
             className="h-full"
