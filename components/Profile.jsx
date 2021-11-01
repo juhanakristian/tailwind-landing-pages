@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Profile() {
   return (
     <div className="flex gap-4 p-2 text-white bg-gray-600 rounded-md">
