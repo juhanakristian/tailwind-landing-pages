@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { getTemplate } from "../lib/templates";
@@ -23,7 +22,7 @@ export default function Home({ templates }) {
             <nav>
               <ul>
                 <li className="flex items-center gap-4">
-                  <Image src="/icons/templates.svg" height={24} width={24} />
+                  <img src="/icons/templates.svg" height={24} width={24} />
                   <span className="h-6 text-lg font-bold">templates.tw</span>
                 </li>
               </ul>
@@ -43,19 +42,19 @@ export default function Home({ templates }) {
         <section className="p-10 pt-10 text-xl">
           <div className="flex flex-wrap justify-between max-w-6xl gap-10 mx-auto">
             <div className="flex gap-4">
-              <Image src="/icons/twitter.svg" height={32} width={32} />
+              <img src="/icons/responsive.svg" height={32} width={32} />
               <span>Responsive</span>
             </div>
             <div className="flex gap-4">
-              <Image src="/icons/twitter.svg" height={32} width={32} />
+              <img src="/icons/dependency.svg" height={32} width={32} />
               <span>No dependencies</span>
             </div>
             <div className="flex gap-4">
-              <Image src="/icons/twitter.svg" height={32} width={32} />
+              <img src="/icons/opensource.svg" height={32} width={32} />
               <span>Open Source</span>
             </div>
             <div className="flex gap-4">
-              <Image src="/icons/twitter.svg" height={32} width={32} />
+              <img src="/icons/customize.svg" height={32} width={32} />
               <span>Easy to customize</span>
             </div>
           </div>
@@ -73,7 +72,7 @@ export default function Home({ templates }) {
           <p>All templates are free and licensed with MIT license.</p>
         </div>
       </section>
-      <main className="p-12 mx-auto">
+      <main className="p-4 mx-auto md:p-12">
         <div>
           {templates.map((t, i) => (
             <div className="pb-12" key={i}>

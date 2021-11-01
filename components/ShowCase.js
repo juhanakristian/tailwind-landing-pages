@@ -5,6 +5,29 @@ import nightOwl from "prism-react-renderer/themes/nightOwl";
 
 import { useResizeHandle } from "useresizehandle";
 
+function useBreakpoints(config) {
+  const [width, setWidth] = React.useState();
+
+  const breakpoints = { sm: 768, md: 1024, lg: 1280, ...config };
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      function handleResize(event) {
+        setWidth(window.innerWidth);
+      }
+
+      window.addEventListener("resize", handleResize);
+
+      return () => document.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  if (width < breakpoints.sm) return "sm";
+  if (width < breakpoints.md) return "md";
+  if (width < breakpoints.lg) return "lg";
+  return "xl";
+}
+
 function CopyIcon() {
   return (
     <svg
@@ -51,6 +74,8 @@ export default function ShowCase({ url, html }) {
   const codeRef = React.useRef(null);
 
   const [resizing, setResizing] = React.useState(false);
+
+  const breakpoint = useBreakpoints();
 
   const { containerProps, handleProps } = useResizeHandle({
     axis: "horizontal",
@@ -137,17 +162,11 @@ export default function ShowCase({ url, html }) {
             style={{
               ...containerProps.style,
               height: "100%",
-              paddingRight: 15,
+              paddingRight: breakpoint !== "sm" ? 15 : 0,
               minWidth: 100,
               maxWidth: "100%",
             }}
           >
-            {/* .dot-bg {
-        background: white;
-        background-image: radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0);
-        background-size: 22px 22px;
-        background-position: -19px -19px;
-    } */}
             <iframe
               style={{
                 display: showCode ? "none" : "block",
@@ -156,21 +175,26 @@ export default function ShowCase({ url, html }) {
               className="w-full h-full"
               src={url}
             ></iframe>
-            <div {...handleProps} style={{ ...handleProps.style, top: "50%" }}>
+            {breakpoint !== "sm" && (
               <div
-                className="w-10 m-w-5"
-                style={{
-                  width: 15,
-                  height: 30,
-                  cursor: "move",
-                  background: "white",
-                  backgroundImage:
-                    "radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0)",
-                  backgroundSize: "7px 9px",
-                  backgroundPosition: "0px 0px",
-                }}
-              ></div>
-            </div>
+                {...handleProps}
+                style={{ ...handleProps.style, top: "50%" }}
+              >
+                <div
+                  className="w-10 m-w-5"
+                  style={{
+                    width: 15,
+                    height: 30,
+                    cursor: "move",
+                    background: "white",
+                    backgroundImage:
+                      "radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0)",
+                    backgroundSize: "7px 9px",
+                    backgroundPosition: "0px 0px",
+                  }}
+                ></div>
+              </div>
+            )}
           </div>
         </div>
       </div>
