@@ -56,6 +56,33 @@ function OpenLinkIcon() {
   );
 }
 
+function HandleIcon() {
+  return (
+    <svg width={10} height={15}>
+      <line
+        x1={5}
+        y1={0}
+        x2={5}
+        y2={15}
+        style={{
+          stroke: "#ccc",
+          strokeWidth: 2,
+        }}
+      />
+      <line
+        x1={9}
+        y1={0}
+        x2={9}
+        y2={15}
+        style={{
+          stroke: "#ccc",
+          strokeWidth: 2,
+        }}
+      />
+    </svg>
+  );
+}
+
 function CodeToggle({ on, onClick }) {
   const text = on ? "</> Code" : "Preview";
   return (
@@ -181,18 +208,15 @@ export default function ShowCase({ url, html }) {
                 style={{ ...handleProps.style, top: "50%" }}
               >
                 <div
-                  className="w-10 m-w-5"
+                  className="w-10 m-w-10 flex"
                   style={{
                     width: 15,
                     height: 30,
                     cursor: "move",
-                    background: "white",
-                    backgroundImage:
-                      "radial-gradient(hsl(0deg, 0%, 90%) 1px, transparent 0)",
-                    backgroundSize: "7px 9px",
-                    backgroundPosition: "0px 0px",
                   }}
-                ></div>
+                >
+                  <HandleIcon />
+                </div>
               </div>
             )}
           </div>
