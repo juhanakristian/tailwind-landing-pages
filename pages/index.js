@@ -14,8 +14,7 @@ export default function Home({ templates }) {
       <header
         className="pt-5 pl-12 pr-12"
         style={{
-          backgroundImage:
-            "linear-gradient(40deg, rgba(225, 228, 251, 1), rgba(252, 240, 253, 1))",
+          backgroundImage: "linear-gradient(40deg, #FCF0FD, #E1E4FB)",
         }}
       >
         <section className="max-w-6xl mx-auto">
@@ -23,24 +22,24 @@ export default function Home({ templates }) {
             <nav>
               <ul>
                 <li className="flex items-center gap-4">
-                  <img src="/icons/templates.svg" height={24} width={24} />
-                  <span className="h-6 text-lg font-bold">templates.tw</span>
+                  <img src="/icons/templates.svg" height={32} width={32} />
+                  <span className="h-6 text-xl font-bold">templates.tw</span>
                 </li>
               </ul>
             </nav>
           </div>
+          <div className="pt-4 sm:pt-0 sm:absolute sm:top-4 sm:right-4">
+            <Profile />
+          </div>
           <div className="items-center pt-20 pb-40 text-center ">
             <h2 className="text-5xl leading-snug text-gray-700">
-              Tailwind templates <br />
+              Tailwind CSS templates <br />
               you can just
               <span className="font-semibold"> copy and paste</span>
             </h2>
           </div>
         </section>
-        <div className="absolute hidden top-4 right-4 md:block">
-          <Profile />
-        </div>
-        <section className="p-10 pt-10 text-lg">
+        <section className="p-10 pt-10 text-lg text-gray-700">
           <div className="flex flex-wrap justify-between max-w-6xl gap-10 mx-auto">
             <div className="flex gap-4">
               <img src="/icons/responsive.svg" height={24} width={24} />
@@ -62,9 +61,19 @@ export default function Home({ templates }) {
         </section>
       </header>
       <section className="p-10 pt-20 text-lg">
-        <div className="max-w-6xl mx-auto">
-          <p className="pb-10 leading-relaxed"></p>
-          <p>All templates are open source and licensed with MIT license.</p>
+        <div className="max-w-6xl mx-auto leading-relaxed">
+          <p className="pb-4">
+            Tailwind CSS is great for rapidly building websites by allowing you
+            to write your styles right into your HTML. This makes it possible to
+            share HTML templates which contain the styles.
+          </p>
+          <p className="pb-4">
+            These templates use the default Tailwind CSS configuration so you
+            can just copy paste them into your project and start editing.
+          </p>
+          <p className="pb-4">
+            All templates are open source and licensed with MIT license.
+          </p>
           <div className="flex pt-2">
             <iframe
               src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=star&count=true&size=small"
@@ -102,13 +111,7 @@ export default function Home({ templates }) {
           ))}
         </div>
       </main>
-      <footer className="p-10">
-        <div className="max-w-6xl m-auto">
-          <div className="sm:hidden">
-            <Profile />
-          </div>
-        </div>
-      </footer>
+      <footer className="p-10"></footer>
     </>
   );
 }
