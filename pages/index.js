@@ -22,7 +22,7 @@ export default function Home({ templates }) {
           description: "Tailwind CSS templates you can just copy and paste",
           images: [
             {
-              url: "/images/og-image.png",
+              url: "https://templates.tw/images/og-image.png",
               width: 1200,
               height: 630,
               alt: "templates.tw",
