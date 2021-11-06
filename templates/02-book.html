@@ -1,61 +1,70 @@
-<div class="bg-gray-50">
+<style>
+  .book {
+    aspect-ratio: 301 / 428;
+    box-shadow: 10px 10px 50px 0px #333, inset 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+</style>
+<div class="bg-gradient-to-b from-white to-red-50">
   <header class="max-w-5xl pt-20 pb-20 ml-auto mr-auto text-center">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-0">
       <div class="flex flex-col items-center gap-4 pt-8">
         <div>
-          <h1 class="p-4 font-bold text-blue-600 text-7xl">THE BOOK TITLE</h1>
-          <h2 class="text-3xl font-bold text-blue-400">BY JOHN DOE</h2>
+          <h1 class="p-4 font-bold text-red-500 text-7xl">THE BOOK TITLE</h1>
+          <h2 class="text-3xl font-bold text-red-400">STANLEY RAYMOND</h2>
           <h3 class="p-4 text-lg text-gray-600">A marketing subtitle describing the book in more detail</h3>
         </div>
         <div class="w-2/3">
-          <div class="font-semibold text-gray-500">
+          <div class="font-light italic text-gray-600">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis fringilla
             lorem eget fermentum.
             Maecenas quis lectus ut leo viverra condimentum
             malesuada ullamcorper nisl."</div>
-          <div class="italic font-semibold">Wall Street Journal</div>
+          <div class="text-lg">A Prestigous Publication</div>
         </div>
         <div class="w-2/3">
-          <div class="font-semibold text-gray-500">
+          <div class="font-light italic text-gray-600">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis fringilla
             lorem eget fermentum.
             Maecenas quis lectus ut leo viverra condimentum
             malesuada ullamcorper nisl."</div>
-          <div class="italic font-semibold">Wall Street Journal</div>
-
+          <div class="text-lg">A Prestigous Publication</div>
         </div>
       </div>
 
-      <!-- Book picture-->
-      <img class="w-3/4 m-auto md:w-full" src="/images/book.png" alt="The Book Title by John Doe" />
-      <div></div>
-    </div>
-    <div>
-
-    </div>
+      <div class="w-3/4 m-auto md:w-full p-10">
+        <img class="book" src="/images/cover.png" alt="The Book Title by Stanley Raymond" />
+      </div>
   </header>
+
   <!-- Links to bookstores-->
-  <section class="relative top-0 z-30 p-8 bg-blue-600 md:sticky">
+  <section class="relative top-0 z-30 p-8 from-red-500 to-red-600 bg-gradient-to-br md:sticky">
     <div class="flex flex-col items-center justify-between max-w-3xl gap-6 m-auto text-center md:flex-row">
       <a href="#">
-        <img class="h-5" src="/images/amazon.svg" alt="Amazon.com" />
+        <img class="h-5"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAVCAYAAACwnEswAAAEtWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwMCIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjIxIgogICBleGlmOkNvbG9yU3BhY2U9IjEiCiAgIHRpZmY6SW1hZ2VXaWR0aD0iMTAwIgogICB0aWZmOkltYWdlTGVuZ3RoPSIyMSIKICAgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIKICAgdGlmZjpYUmVzb2x1dGlvbj0iNzIvMSIKICAgdGlmZjpZUmVzb2x1dGlvbj0iNzIvMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0x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"
+          alt="Amazon.com" />
       </a>
       <a href="#">
-        <img class="h-5" src="/images/lulu.svg" alt="Lulu.com" />
+        <img class="h-5"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAoCAYAAAAIeF9DAAAEtWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwMCIKICAgZXhpZjpQaXhlbFlEaW1lbnNpb249IjQwIgogICBleGlmOkNvbG9yU3BhY2U9IjEiCiAgIHRpZmY6SW1hZ2VXaWR0aD0iMTAwIgogICB0aWZmOkltYWdlTGVuZ3RoPSI0MCIKICAgdGlmZjpSZXNvbHV0aW9uVW5pdD0iMiIKICAgdGlmZjpYUmVzb2x1dGlvbj0iNzIvMSIKICAgdGlmZjpZUmVzb2x1dGlvbj0iNzIvMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0x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"
+          alt="lulu.com" />
       </a>
       <a href="#">
-        <img class="h-5" src="/images/leanpub.png" alt="leanpub.com" />
+        <img class="h-5"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABDCAYAAABjoACgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABSRJREFUeNrsXP11mzAQx375P+oEYQOzQdig3iDOBHUnKBs4mYB0grgTQCYwmcBkAuMJXCk9xYqK0DfgoHvvHnl20En3ofsd5hRFgQIFChQoUKBBaOZz8NPphPAlwZxivsEcY6aftVGDuYLrK/xdzWaz2lB+DLIILxjZSHALlU3kvWEuQX5zMQbAi17iyy0oPXE0bAXKeJQZA5T+w5P8Fyx/O7owwotOMeeYDyf/VBB5gjkUPcg/wFrToZWOMK8w70/DEFF2AlwMNIc96AD1tgWBsDWEOYoC0dz1iPlBN1+YGCDHl5WDSdfAlJDDPVtlT2cVFQPb0hM2wL3ODVcGQnQnWsKCCaqp8QRLDeREk7kNvSdPVUQDe3sMqCnRlB97dx08wZ3CvrgBNOQq16w1c80e7kGO5rCENcnmsOsjB5wEXxF49rsNpjFenUA9kLRsO+yW9AJ/lyzsJAkPXzYduYd49098zxMHS1PGo6mn3suisQNm32FudTA85syn9yMRIhHAwo1CxMhoxyINmEPe8n859z9riezUUhci5IV8GiCVGQCUfvCEvzM2GuCzA0QGVXymKN+XAVKfBlgKhGbwfdID9iZenTDyEsY5dPKErQEywbhauW+uKVcGE/uoC8gc3rclvN0SVFOBAxSaKCT1OD9vMPS6A+ppC7ekHPDAraO6xATe/tLQkRMDjCECPhlhhFWxlhPOXUhk4NxiKs8eTCCsCwOkI4sAG7r1NG7adwSUpuH3BajsLQIUYVt4OqquK2cRUFFMPkFdV33mAJFVjxfq/S7qgKPt2HOHXhAiwHMEiFBDM+H9v7FFWC4jYBEiwG8EJIKC5GIjwPaBXMeva4kPAyCJB0wxB4iiADk1QAfEbEIN0J4HVGH53ML7CdUTrgE+6cA0ClQNIFLw24V7v4ta4M0mDziJgAnv/71FwEIiHAUDKOvMSwQsggEGyAHMOzuXGgHWvwl0vC7vPQewguNo2lR7iwB4sywKBtDfhjp0pxUBcVcBoiJkqsWYimPaGOD1C3h/6mic1yEM0ITtp58IuBF8XgUD/KcLVd05jYCboP8BcgB5J/MrRICLt5kZXfRmgCZAUKUosDNAR7NBFQyglgdkDRuyl3MThzVADUwmeozOxxLw8siEr6NzSxNy4JkVI7fmCqfKYwTQNZWmBkAWNQARqtydyNzDexDtVLyL1B97b0H21vScCcNaYKn7SMI0AkTbD1n4H1h406JI1FL8LMAjj5zHkpbWGhIc4QeIuFXU3iROxvgdtTRLw30xF1E0yl5anKDpSKy6lIBejBDCpqu9B9p0aEtozO57TGvnzvIogJw/DoDrBfvoEeO+X8G9e8t2qA2sBcnQlGCMjQ1EKyQG4JW+9nxuw6dDMkAm4pSQez6forX/WKWB0cQArd7L/Q/xjucBDupIucX3fWDHM9+QZ9K8PZMYQNSU/S36d2DH3cAw9AGu6wHn8JF7MB8EhdrMpQGaKPQBdEFRpGOAK4MS3VT5ZXQ+CozH4uzY9HixxGF00fqDHoMmqlrj6Hy0mskjCiTSpain7MqjN5QASUtNSLfloCs9lyE2UDo9v8IIUjI1yPfIX1+xUHhmmBytTpDqmI/q6Vx7HpY6kk+hrUmyz3wbIO/rp0nJvLKe5hBrwl0jAxQKnpZ5PR2kY2vgomE/xPupTEEoi8zChQH2gH3XY3gZFxa/A0YjmE8CunluMUihDUOZZzcun4s4NwLAvGak8xu9DgMFChQo0HD0V4ABAKiCSwHftnDCAAAAAElFTkSuQmCC"
+          alt="leanpub.com" />
       </a>
     </div>
   </section>
-  <!-- </div> -->
 
   <!-- About the book-->
   <section class="pt-12 pb-12">
     <div class="grid max-w-6xl grid-cols-1 m-auto lg:grid-cols-2">
       <div class="p-4 text-gray-900 md:p-12">
         <h4 class="pb-8 pl-4 text-5xl">About the book</h4>
-        <div class="w-32 h-1 mb-8 ml-4 bg-blue-300"></div>
+        <div class="w-32 h-1 mb-8 ml-4 bg-red-300"></div>
         <h5 class="p-4 text-2xl font-semibold">Summary</h5>
         <p class="p-4">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
@@ -137,8 +146,6 @@
     <!-- <h4 class="text-6xl text-center">What people are saying</h4> -->
     <div class="grid max-w-6xl grid-cols-1 gap-4 pl-12 pr-12 m-auto md:grid-cols-3">
       <div class="relative h-96">
-        <!--Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/s/photos/ceo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  -->
         <img class="absolute z-20 object-cover w-full h-full hover:z-0"
           src="https://source.unsplash.com/0Zx1bDv5BNY/" />
         <div
@@ -150,9 +157,7 @@
         </div>
       </div>
       <div class="relative h-96">
-        <!--https://unsplash.com/photos/_5_CBVCLBsY-->
-        <img class="absolute z-20 object-cover w-full h-full hover:z-0"
-          src="https://source.unsplash.com/_5_CBVCLBsY" />
+        <img class="absolute z-20 object-cover w-full h-full hover:z-0" src="https://source.unsplash.com/_5_CBVCLBsY" />
         <div
           class="absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 pointer-events-none">
           <p class="p-2 text-2xl text-center text-white pointer-events-none ">
@@ -163,8 +168,7 @@
       </div>
       <div class="relative h-96">
         <!-- Photo by <a href="https://unsplash.com/@fotosushi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Foto  Sushi</a> on <a href="https://unsplash.com/s/photos/ceo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>-->
-        <img class="absolute z-20 object-cover w-full h-full hover:z-0"
-          src="https://source.unsplash.com/6anudmpILw4" />
+        <img class="absolute z-20 object-cover w-full h-full hover:z-0" src="https://source.unsplash.com/6anudmpILw4" />
         <div
           class="absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 pointer-events-none">
           <p class="p-2 text-2xl text-center text-white pointer-events-none ">
@@ -174,8 +178,7 @@
         </div>
       </div>
       <div class="relative h-96">
-        <img class="absolute z-20 object-cover w-full h-full hover:z-0"
-          src="https://source.unsplash.com/toCKeKuQpL0" />
+        <img class="absolute z-20 object-cover w-full h-full hover:z-0" src="https://source.unsplash.com/toCKeKuQpL0" />
         <div
           class="absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 pointer-events-none">
           <p class="p-2 text-2xl text-center text-white pointer-events-none ">
@@ -185,8 +188,7 @@
         </div>
       </div>
       <div class="relative h-96">
-        <img class="absolute z-20 object-cover w-full h-full hover:z-0"
-          src="https://source.unsplash.com/pAtA8xe_iVM" />
+        <img class="absolute z-20 object-cover w-full h-full hover:z-0" src="https://source.unsplash.com/pAtA8xe_iVM" />
         <div
           class="absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 pointer-events-none">
           <p class="p-2 text-2xl text-center text-white pointer-events-none ">
@@ -196,8 +198,7 @@
         </div>
       </div>
       <div class="relative h-96">
-        <img class="absolute z-20 object-cover w-full h-full hover:z-0"
-          src="https://source.unsplash.com/AzVexpHvuKY" />
+        <img class="absolute z-20 object-cover w-full h-full hover:z-0" src="https://source.unsplash.com/AzVexpHvuKY" />
         <div
           class="absolute top-0 left-0 z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 pointer-events-none">
           <p class="p-2 text-2xl text-center text-white pointer-events-none ">
@@ -214,8 +215,8 @@
     <section class="max-w-6xl p-6 pt-20 pb-12 m-auto md:p-12">
       <div class="grid grid-cols-1 gap-20 lg:grid-cols-2">
         <div class="flex-grow">
-          <h4 class="pb-8 text-4xl">About the author, John Doe</h4>
-          <div class="w-32 h-1 mb-8 bg-blue-300"></div>
+          <h4 class="pb-8 text-4xl">About the author, Stanley Raymond</h4>
+          <div class="w-32 h-1 mb-8 bg-red-300"></div>
           <p class="pt-4 pb-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium, odio at faucibus molestie, nulla
             lacus egestas lacus, id ullamcorper magna lacus id neque. Vivamus quis augue ex. Nullam vitae quam
@@ -233,7 +234,7 @@
           <img class="m-auto w-72 lg:w-96" src="https://source.unsplash.com/84E44EdD18o" />
         </div>
       </div>
-  </section>
+    </section>
   </div>
 
   <section class="p-10 lg:p-28">
@@ -241,7 +242,7 @@
       <p class="text-2xl text-center">Join the newsletter and get a free chapter!</p>
       <div class="flex flex-col w-full gap-2 pt-8 pb-4 md:flex-row">
         <input class="box-border w-full p-4 border-2 rounded-md" placeholder="Your email address"></input>
-          <button class="p-4 text-base font-semibold text-gray-900 bg-blue-300 rounded-lg  md:w-72 hover:bg-blue-400">
+        <button class="p-4 text-base font-semibold text-gray-900 bg-red-300 rounded-lg  md:w-72 hover:bg-red-400">
           Subscribe
         </button>
       </div>
@@ -249,6 +250,7 @@
   </section>
 
   <footer class="p-20 pt-10">
+    <!-- Social media icons from https://tablericons.com/ -->
     <ul class="flex justify-between max-w-2xl m-auto">
       <li class="flex items-center gap-2">
         <a aria-label="twitter" class="text-gray-500" href="#">

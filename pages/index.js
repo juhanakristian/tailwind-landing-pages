@@ -1,15 +1,16 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 import { getTemplate } from "../lib/templates";
 
 import ShowCase from "../components/ShowCase";
 import Profile from "../components/Profile";
-// import { Globe, Twitter } from "../components/icons";
 
 export default function Home({ templates }) {
   return (
     <>
+      <Head>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+      </Head>
       <header
         className="pt-5 pl-12 pr-12"
         style={{
@@ -39,37 +40,57 @@ export default function Home({ templates }) {
         <div className="absolute hidden top-4 right-4 md:block">
           <Profile />
         </div>
-        <section className="p-10 pt-10 text-xl">
+        <section className="p-10 pt-10 text-lg">
           <div className="flex flex-wrap justify-between max-w-6xl gap-10 mx-auto">
             <div className="flex gap-4">
-              <img src="/icons/responsive.svg" height={32} width={32} />
+              <img src="/icons/responsive.svg" height={24} width={24} />
               <span>Responsive</span>
             </div>
             <div className="flex gap-4">
-              <img src="/icons/dependency.svg" height={32} width={32} />
+              <img src="/icons/dependency.svg" height={24} width={24} />
               <span>No dependencies</span>
             </div>
             <div className="flex gap-4">
-              <img src="/icons/opensource.svg" height={32} width={32} />
+              <img src="/icons/opensource.svg" height={24} width={24} />
               <span>Open Source</span>
             </div>
             <div className="flex gap-4">
-              <img src="/icons/customize.svg" height={32} width={32} />
+              <img src="/icons/customize.svg" height={24} width={24} />
               <span>Easy to customize</span>
             </div>
           </div>
         </section>
       </header>
-      <section className="p-10 pt-20 text-xl">
+      <section className="p-10 pt-20 text-lg">
         <div className="max-w-6xl mx-auto">
-          <p className="pb-10 leading-relaxed">
-            Tailwind CSS is great for rapid development of frontend. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Proin lorem mi,
-            hendrerit eu congue sit amet, facilisis ac lectus. Ut tempor massa
-            in justo mollis gravida. Nulla dapibus magna ex, ut sodales ipsum
-            bibendum nec. Maecenas non ex nisl.
-          </p>
-          <p>All templates are free and licensed with MIT license.</p>
+          <p className="pb-10 leading-relaxed"></p>
+          <p>All templates are open source and licensed with MIT license.</p>
+          <div className="flex pt-2">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=star&count=true&size=small"
+              frameborder="0"
+              scrolling="0"
+              width="90"
+              height="30"
+              title="GitHub"
+            ></iframe>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=watch&count=true&v=2"
+              frameborder="0"
+              scrolling="0"
+              width="100"
+              height="20"
+              title="GitHub"
+            ></iframe>
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=fork&count=true&size=small"
+              frameborder="0"
+              scrolling="0"
+              width="90"
+              height="30"
+              title="GitHub"
+            ></iframe>
+          </div>
         </div>
       </section>
       <main className="p-4 mx-auto md:p-12">
