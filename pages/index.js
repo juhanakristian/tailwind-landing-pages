@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 import { getTemplate } from "../lib/templates";
 
@@ -11,6 +12,26 @@ export default function Home({ templates }) {
       <Head>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
       </Head>
+      <NextSeo
+        title="templates.tw"
+        description="Tailwind CSS templates you can just copy and paste"
+        canonical="https://templates.tw"
+        openGraph={{
+          url: "https://templates.tw",
+          title: "templates.tw",
+          description: "Tailwind CSS templates you can just copy and paste",
+          images: [
+            {
+              url: "/images/og-image.png",
+              width: 1200,
+              height: 630,
+              alt: "templates.tw",
+              type: "image/png",
+            },
+          ],
+          site_name: "templates.tw",
+        }}
+      />
       <header
         className="pt-5 pl-12 pr-12"
         style={{
