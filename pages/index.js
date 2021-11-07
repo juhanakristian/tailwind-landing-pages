@@ -98,7 +98,7 @@ export default function Home({ templates }) {
           <div className="flex pt-2">
             <iframe
               src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=star&count=true&size=small"
-              frameborder="0"
+              frameBorder="0"
               scrolling="0"
               width="90"
               height="30"
@@ -106,7 +106,7 @@ export default function Home({ templates }) {
             ></iframe>
             <iframe
               src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=watch&count=true&v=2"
-              frameborder="0"
+              frameBorder="0"
               scrolling="0"
               width="100"
               height="20"
@@ -114,7 +114,7 @@ export default function Home({ templates }) {
             ></iframe>
             <iframe
               src="https://ghbtns.com/github-btn.html?user=juhanakristian&repo=tailwind-landing-pages&type=fork&count=true&size=small"
-              frameborder="0"
+              frameBorder="0"
               scrolling="0"
               width="90"
               height="30"
