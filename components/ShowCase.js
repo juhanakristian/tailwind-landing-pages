@@ -96,7 +96,7 @@ function CodeToggle({ on, onClick }) {
   );
 }
 
-export default function ShowCase({ url, html }) {
+export default function ShowCase({ url, html, resizeDisabled, height, title }) {
   const [showCode, setShowCode] = React.useState(false);
   const codeRef = React.useRef(null);
 
@@ -123,7 +123,8 @@ export default function ShowCase({ url, html }) {
 
   return (
     <div className="mx-auto" style={{ maxWidth: "72rem" }}>
-      <div className="flex justify-end w-full gap-2 pb-4">
+      <div className="flex w-full gap-2 pb-4">
+        <h2 className="text-xl font-semibold flex-grow">{title}</h2>
         <CodeToggle on={!showCode} onClick={() => setShowCode(!showCode)} />
         <button
           className="flex items-center justify-center h-8 pl-2 pr-2 text-gray-300 bg-gray-100 rounded-md"
@@ -132,17 +133,19 @@ export default function ShowCase({ url, html }) {
         >
           <CopyIcon />
         </button>
-        <a
-          className="flex items-center justify-center h-8 pl-2 pr-2 text-gray-300 bg-gray-100 rounded-md"
-          target="_blank"
-          rel=""
-          href={url}
-          title="Open in a new tab"
-        >
-          <OpenLinkIcon />
-        </a>
+        {url && (
+          <a
+            className="flex items-center justify-center h-8 pl-2 pr-2 text-gray-300 bg-gray-100 rounded-md"
+            target="_blank"
+            rel=""
+            href={url}
+            title="Open in a new tab"
+          >
+            <OpenLinkIcon />
+          </a>
+        )}
       </div>
-      <div style={{ height: showCode ? "auto" : "46rem" }}>
+      <div style={{ height: showCode ? "auto" : height }}>
         <div className="h-full bg-gray-100 border-2 border-gray-100 rounded-lg shadow-md">
           <div style={{ display: !showCode ? "none" : "block" }}>
             {showCode && (
@@ -194,15 +197,24 @@ export default function ShowCase({ url, html }) {
               maxWidth: "100%",
             }}
           >
-            <iframe
-              style={{
-                display: showCode ? "none" : "block",
-                pointerEvents: resizing ? "none" : "initial",
-              }}
-              className="w-full h-full"
-              src={url}
-            ></iframe>
-            {breakpoint !== "sm" && (
+            {url ? (
+              <iframe
+                style={{
+                  display: showCode ? "none" : "block",
+                  pointerEvents: resizing ? "none" : "initial",
+                }}
+                className="w-full h-full"
+                src={url}
+              ></iframe>
+            ) : (
+              <div
+                style={{
+                  display: showCode ? "none" : "block",
+                }}
+                dangerouslySetInnerHTML={{ __html: html }}
+              ></div>
+            )}
+            {breakpoint !== "sm" && !Boolean(resizeDisabled) && (
               <div
                 {...handleProps}
                 style={{ ...handleProps.style, top: "50%" }}

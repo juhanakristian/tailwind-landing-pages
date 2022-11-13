@@ -6,7 +6,7 @@ export default function Template({ html }) {
   return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
 }
 
-export async function getStaticProps({ params: { template } }) {
+export function getStaticProps({ params: { template } }) {
   const html = getTemplate(template);
   return {
     props: {
@@ -14,7 +14,7 @@ export async function getStaticProps({ params: { template } }) {
     },
   };
 }
-export async function getStaticPaths() {
+export function getStaticPaths() {
   const paths = templatesFilePaths
     .map((path) => path.replace(/\.html$/, ""))
     .map((template) => ({ params: { template } }));

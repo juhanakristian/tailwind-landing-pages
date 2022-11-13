@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  min-height: 600px;
+  background-image: linear-gradient(
+    197deg,
+    #ffe8d377 110px 124px,
+    #cec6ff77 200px 500px,
+    #ffffff 600px 100px
+  );
+  background-repeat: no-repeat;
+}
