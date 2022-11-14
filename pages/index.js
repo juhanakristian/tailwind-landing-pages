@@ -33,13 +33,7 @@ export default function Home({ templates }) {
           site_name: "templates.tw",
         }}
       />
-      <header
-        className="p-5 pt-5 "
-        // style={{
-        //   backgroundImage:
-        //     "linear-gradient(47deg, #FCF0FD 0 16%, #cec6ff 30% 80%, #FFE8D3 89% 100%, #E1E4FB 90% 100%)",
-        // }}
-      >
+      <header className="p-5 pt-5 ">
         <section>
           <div className="mx-auto flex max-w-6xl items-baseline">
             <span className=" whitespace-nowrap text-3xl font-semibold text-gray-700">
@@ -104,7 +98,7 @@ export default function Home({ templates }) {
                   </div>
                 </div>
                 <div className="border-b-2 border-gray-100 py-4">
-                  <a href="#" class="px-4 font-medium hover:text-gray-900">
+                  <a href="/" class="px-4 font-medium hover:text-gray-900">
                     Templates
                   </a>
                 </div>
