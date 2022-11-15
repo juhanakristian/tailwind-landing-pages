@@ -39,7 +39,7 @@ export default function Home({ templates }) {
             <span className=" whitespace-nowrap text-3xl font-semibold text-gray-700">
               🪁 templates.tw
             </span>
-            <section className="invisible flex-grow pl-10 text-base md:visible">
+            <section className="hidden flex-grow pl-10 text-base md:block">
               <nav className="mx-auto max-w-6xl">
                 <ul className="flex items-center justify-start gap-8">
                   <li>
