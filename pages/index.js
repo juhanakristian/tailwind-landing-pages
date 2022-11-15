@@ -146,8 +146,8 @@ export default function Home({ templates }) {
               </svg>
               <h5 className="font-semibold">Responsive</h5>
               <p className="text-center">
-                All templates are responsive and work on all devices. All
-                templates are responsive and work on all devices.
+                All templates are responsive and work on devices of different
+                sizes.
               </p>
             </section>
             <section className="flex flex-col items-center gap-4">
@@ -164,8 +164,8 @@ export default function Home({ templates }) {
               </svg>
               <h5 className="font-semibold">Open Source</h5>
               <p className="text-center">
-                All templates are responsive and work on all devices. All
-                templates are responsive and work on all devices.
+                Templates, elements and this site are all fully open source with
+                a permissive license.
               </p>
             </section>
             <section className="flex flex-col items-center gap-4">
@@ -182,8 +182,8 @@ export default function Home({ templates }) {
               </svg>
               <h5 className="font-semibold">Easy to customize</h5>
               <p className="text-center">
-                All templates are responsive and work on all devices. All
-                templates are responsive and work on all devices.
+                You can just copy paste the HTML into your project and customize
+                it as you like.
               </p>
             </section>
           </div>
